@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<context-param> <!-- 전체정보 -->
+		<param-name>dbInfo</param-name>
+		<param-value>jdbcURL</param-value>
+	</context-param>
+	<servlet>
+		<servlet-name>myServlet</servlet-name>
+		<servlet-class>kr.co.bit.day7.MyServlet</servlet-class>
+		<init-param>
+			<param-name>data</param-name>
+			<param-value>10</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>myServlet</servlet-name>
+		<url-pattern>/myServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>yourServlet</servlet-name>
+		<servlet-class>kr.co.bit.day7.YourServlet</servlet-class>
+		<init-param>
+			<param-name>data</param-name>
+			<param-value>10</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>yourServlet</servlet-name>
+		<url-pattern>/yourServlet123</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>controller</servlet-name>
+		<servlet-class>kr.co.bit.controller.MyController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>controller</servlet-name>
+		<url-pattern>/controller</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>
